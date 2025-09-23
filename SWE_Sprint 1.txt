@@ -1,0 +1,613 @@
+﻿CartIQ
+Smart Grocery App
+Software Engineering Project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
+         Name (s):Ismail El Ktiri El Idrissi, Jada McCladdie, Mohamed Tarawally, Rami Bader, Brian Aladeselu 
+         Semester: Fall 2025
+         Group Number: 3
+         Coordinator: Mohamed Tarawally
+         Name of the Guide: Dr. Tushara Sadasivuni
+
+
+Date: 09/06/2025
+________________
+
+
+ TABLE OF CONTENTS
+1.0        INTRODUCTION        3
+1.1        Software Engineers' information        3
+1.2        Planning and Scheduling        4
+1.3        Teamwork basics        5
+1.4        Problem Statement        6
+1.5        System Requirements        7
+1.5.1        Context Diagram        7
+1.5.2        Activity Diagram        8
+2.0        REQUIREMENTS        9
+2.1        Use Cases        9
+2.2        Requirements        10
+2.3        Use Case Diagrams        11
+3.0        DATABASE TABLES        12
+4.0        CLASS DIAGRAM        5
+5.0        BEHAVIORAL MODELING        5
+6.0        IMPLEMENTATION        5
+7.0        TESTING        6
+7.1        Test cases        5
+7.2        Testing        6
+8.0        ARCHITECTURAL MODELING        6
+8.1        Architectural Views        4
+8.2        Architectural Model        4
+9.0        GITHUB        6
+REFERENCES        14
+
+
+
+
+
+
+1. INTRODUCTION
+   1. Software Engineers’ information
+        Jada McCladdie: I am a senior Computer Science student with strong skills in software engineering and programming. I have experience with several programming languages including Python, Java, C, and SQL and have become proficient in writing clear, efficient code. I excel in solving problems logically and applying what I know to create practical solutions. I’m quick to learn new technologies and adapt to different challenges. With these skills, I’m confident in my ability to take on and succeed in completing this project.
+        Name: Rami Bader
+        I am a senior Computer Science student. I have some experience with Python, Java, and SQL and I practice coding in different environments. I also have some experience with UML for software design and functional programming in basic Haskell. I am currently learning skills related to AI and ML. I am also interested in improving my abilities in software development with a focus on data.  
+
+
+Ismail El Ktiri El Idrissi: I am a Computer Science student at Georgia State University with experience in Python, Java, and SQL, and I actively practice coding in different environments. I also have background knowledge in UML for software design and functional programming with Haskell. Currently, I am expanding my skills in Artificial Intelligence and Machine Learning, while also working to strengthen my expertise in software development with a focus on data-driven applications. 
+Brian Aladeselu: I am a senior at Georgia State University majoring in Computer Science. I am experienced in many languages, ranging from frontend technologies such as React and Flutter, to backend technologies like PHP and Python. I have a handful of internships and cooperative experiences, but I am always looking to collaborate with people on larger projects and make a meaningful impact. I am currently learning AWS and improving my technical skills through Leetcode and HackerRank.
+
+
+Mohamed Tarawally
+I am a senior at Georgia State University seeking a degree in Computer Science. Over the years, I have gained experience by building a variety of projects, including full-stack applications. I have worked with programming languages such as JavaScript, Python, SQL, and Java. My technical experience also includes using tools and frameworks like MongoDB, SQLite, React, Node.js, and Firebase. As I continue my career, I aim to expand my experience in building full-stack applications with commercial value while strengthening my skills in cybersecurity.
+
+
+
+
+
+
+
+
+   2. Planning and Scheduling
+        
+Assignee Name
+	Email address
+	Task
+	Duration (hours)
+	Dependency
+	Due Date
+	Evaluation
+	Mohamed Tarawally
+(coordinator)
+	mbtaraw@gmail.com
+	
+
+	
+
+	
+
+	
+
+	 
+	Ismail El Ktiri El Idrissi
+	ismail.elktiri02@gmail.com
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	Jada McCladdie
+	jadamccladdie05@gmail.com
+
+
+	Planning & Scheduling Table, Fixing format/page numbers, GitHub 
+	
+
+	All other sections being complete
+	
+
+	
+
+	Brian Aladeselu
+	aladebrian@gmail.com
+	
+
+	
+
+	
+
+	
+
+	
+
+	Rami Bader
+	ramibader1473@gmail.com
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   3. Teamwork Basics
+        
+Work Norms
+Work will be distributed based on each member’s strengths and availability. Deadlines will be set collectively by the group, and everyone is expected to honor their commitments. If someone does not follow through or misses a deadline, the task will be reassigned, and the group will provide support to help them get back on track. All work will be reviewed together to ensure quality, and if there are disagreements about standards, the group will discuss and agree on a shared expectation. Different work habits will be respected—some may prefer to work early, others closer to deadlines—but everyone must finish by the agreed timeline to keep the project on schedule.
+Facilitator Norms
+We will use a facilitator, and the position will rotate among team members so everyone gets experience. The facilitator’s role is not to be the leader but to guide the group by keeping discussions on track, encouraging equal participation, summarizing decisions, managing time, and helping solve conflicts. The facilitator will also step in if the team stalls or gets off-topic.
+Communication Norms
+Communication will happen daily through group chat (Imessage or Discord) for quick updates, while important files or decisions will be shared by email. This ensures everyone is kept in the loop and has a record of key points. Members should check messages regularly and respond promptly so the team can move forward without delays.
+Meeting Norms
+Meetings will be scheduled around everyone’s availability, with all of us responsible for coordinating times. Meetings will usually be online unless an in-person option works better for the team. Being on time is expected, and if someone is late, the meeting will continue, and notes will be shared afterward. If someone misses a meeting, they are expected to review the notes and catch up; missing several meetings will require a private conversation to resolve the issue.
+Consideration Norms
+Meetings will be kept professional and respectful. Eating during meetings is acceptable if it doesn’t cause distractions, but smoking or other disruptive behavior will not be allowed. If one person dominates the discussion, the facilitator will redirect to make space for others. Quieter members will be encouraged to share their input. If someone feels uncomfortable with any norm or process, the group will adjust the rules to ensure inclusivity and fairness.
+Goals
+Our primary goal is to complete a high-quality project and aim for an “A” in the course. At the same time, we recognize that workloads across different classes may vary, so we will keep communicating openly if priorities shift during the semester. Beyond grades, our goals include building camaraderie, practicing teamwork on a real project, and learning how to collaborate effectively in a group setting.
+
+
+
+
+   4. Problem Statement
+The Smart Grocery app is an AI-driven platform that helps users plan meals, create grocery lists, track budgets, and shop more efficiently. It is designed for individuals, families, students, and health- conscious users who want to save time, money, and effort when grocery shopping. The app tackles common problems like the hassle of meal planning, overspending, food waste, and the difficulty of coordinating shopping, while also making the process healthier and more collaborative. While alternatives such as AnyList, Out of milk, and MyFitnessPal exist, most of these apps focus on only one or two specific areas, which makes it more difficult for users to juggle multiple tools. This project is compelling because it combines all these fragmented features into a single app, powered by AI to generate grocery lists, convert recipes into shopping needs, predict expiration dates, and provide personalized recommendations. Competitors exist, but none of them offer users with this level of integrations. Key differentiators include AI- powered grocery planning, receipt scanning, store price lookup with mock data, purchase history tracking, and collaborative list sharing. From a technical perspective, the app is feasible using today’s resources: mobile frameworks like Flutter or React Native, cloud databases such as Firebase or PostgreSQL, AI and NLP for recipes and receipts, and APIs for price and fitness integration. This platform is also interesting because it combines AI driven personalization, real-time collaboration, multi-source data integration, and analytics in one system. The app will support both client logins, where users can access and manage their preferences, lists, and budgets, and admin logins for overseeing accounts, monitoring usage, and updating mock datasets. There were no outside documents used to create this plan. 
+________________
+
+
+   5. System Requirements
+1.5.1 Context Diagram
+  
+
+
+
+________________
+1.5.2 Activity Diagram
+https://drive.google.com/file/d/1UxD4M_ikz0a-XhGMGY-hf04EOi9KyAzW/view?usp=sharing
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. REQUIREMENTS
+2.1    Use Cases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.2    Requirements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.3    Use Case Diagrams
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 3.0     DATABASE TABLES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 9.0     GITHUB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________
+References
+* Sudha Tushara Sadasivuni, Yanqing Zhang, "Timestamp analysis of mental health tweets of Twitter users along with COVID-19 confirmed cases", Proceedings of the 13th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics, pp.1, 2022.
+* Sudha Tushara Sadasivuni, Yanqing Zhang, "Analyzing Events’ Impacts on Mental Health Using Tweets", 2022 IEEE/WIC/ACM International Joint Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT), pp.534-538, 2022.
