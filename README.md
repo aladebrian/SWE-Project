@@ -1,6 +1,6 @@
 # SWE-Project
 
-## Set up Virtual environment:
+## Set up virtual environment:
 ```bash
 python -m venv env
 env/Scripts/activate.bat
