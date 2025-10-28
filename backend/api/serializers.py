@@ -10,6 +10,10 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         return user
+class GroceryItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GroceryList.items.through
+        fields = ['item_id', 'name', 'category', 'price']
 
 class GroceryListSerializer(serializers.ModelSerializer):
     class Meta:

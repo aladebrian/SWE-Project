@@ -4,8 +4,8 @@ from django.contrib.auth.models import User
 class GroceryItem(models.Model):
     item_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
-    quantity = models.IntegerField()
-    price = models.DecimalField(max_digits=10, decimal_places=2)
+    category = models.CharField(max_length=50, default='General')
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
 
 class GroceryList(models.Model):
     list_id = models.AutoField(primary_key=True)
