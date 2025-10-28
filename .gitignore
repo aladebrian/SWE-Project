@@ -1,9 +1,1 @@
-# virtual environment
-/env
-
-# database files
-/backend/db.sqlite3
-/backend/mydb.mysql
-
-# python byte code
-__pycache__
+env

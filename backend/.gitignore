@@ -1,0 +1,6 @@
+# Database files
+db.sqlite3
+mydb.mysql
+
+# Python byte code
+__pycache__
