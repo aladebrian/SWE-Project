@@ -1,4 +1,4 @@
-import "../styles/Groceries.css"
+import "../styles/Grocery.css"
 type GroceryItem = {
     id: number;
     name: string;

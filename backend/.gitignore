@@ -4,3 +4,5 @@ mydb.mysql
 
 # Python byte code
 __pycache__
+
+.env

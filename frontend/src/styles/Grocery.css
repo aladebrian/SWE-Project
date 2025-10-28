@@ -5,15 +5,15 @@
   border-radius: 5px;
 }
 
-.grocery-title {
+.grocery-name {
   color: #333;
 }
 
-.grocery-content {
+.grocery-category {
   color: #666;
 }
 
-.grocery-date {
+.grocery-price {
   color: #999;
   font-size: 0.8rem;
 }

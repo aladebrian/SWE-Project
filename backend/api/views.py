@@ -25,8 +25,6 @@ class GroceryItemListDelete(generics.DestroyAPIView):
     def get_queryset(self):
         return GroceryItem.objects.all()
     
-    def perform_destroy(self, instance):
-        instance.delete()
 
 class GroceryListCreate(generics.ListCreateAPIView):
     serializer_class = GroceryListSerializer
@@ -50,9 +48,6 @@ class GroceryListDelete(generics.DestroyAPIView):
         user = self.request.user
         return GroceryList.objects.filter(owner=user)
     
-    def perform_destroy(self, instance):
-        instance.delete()
-
 class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer

@@ -5,8 +5,9 @@ import "../styles/Home.css"
 
 function Home() {
     const [groceries, setGroceries] = useState<GroceryItem[]>([]);
-    const [content, setContent] = useState("");
-    const [title, setTitle] = useState("");
+    const [name, setName] = useState("");
+    const [category, setCategory] = useState("");
+    const [price, setPrice] = useState("");
 
     useEffect(() => {
         getGroceries();
@@ -37,11 +38,14 @@ function Home() {
     const createGrocery = (e: React.FormEvent) => {
         e.preventDefault();
         api
-            .post("/api/groceries/", { content, title })
+            .post("/api/groceries/", { name, category, price })
             .then((res) => {
                 if (res.status === 201) alert("Grocery created!");
                 else alert("Failed to make grocery.");
                 getGroceries();
+                setName("");
+                setCategory("");
+                setPrice("");
             })
             .catch((err) => alert(err));
     };
@@ -56,25 +60,37 @@ function Home() {
             </div>
             <h2>Create a Grocery</h2>
             <form onSubmit={createGrocery}>
-                <label htmlFor="title">Title:</label>
+                <label htmlFor="name">Name:</label>
                 <br />
                 <input
                     type="text"
-                    id="title"
-                    name="title"
+                    id="name"
+                    name="name"
                     required
-                    onChange={(e) => setTitle(e.target.value)}
-                    value={title}
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
                 />
-                <label htmlFor="content">Content:</label>
+                <label htmlFor="category">Category:</label>
                 <br />
-                <textarea
-                    id="content"
-                    name="content"
+                <input
+                    type="text"
+                    id="category"
+                    name="category"
                     required
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
-                ></textarea>
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                />
+                <label htmlFor="price">Price:</label>
+                <br />
+                <input
+                    type="number"
+                    step="0.01"
+                    id="price"
+                    name="price"
+                    required
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                />
                 <br />
                 <input type="submit" value="Submit"></input>
             </form>

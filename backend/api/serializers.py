@@ -1,19 +1,21 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import GroceryList
+from .models import GroceryList, GroceryItem
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'email']
+        fields = ['id', 'username', 'password']
         extra_kwargs = {"password": {"write_only": True}}
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         return user
+    
 class GroceryItemSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(source='item_id', read_only=True)
     class Meta:
-        model = GroceryList.items.through
-        fields = ['item_id', 'name', 'category', 'price']
+        model = GroceryItem
+        fields = ['id', 'name', 'category', 'price']
 
 class GroceryListSerializer(serializers.ModelSerializer):
     class Meta:
