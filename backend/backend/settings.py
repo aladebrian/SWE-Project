@@ -94,13 +94,24 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'mydb',
+#         'USER': 'test',
+#         'PASSWORD': 'password',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb',
-        'USER': 'test',
-        'PASSWORD': 'password',
-        'HOST': '127.0.0.1',
+        'NAME': 'cartiq_db',
+        'USER': 'yourusername',         # match the name you picked
+        'PASSWORD': 'yourpassword',     # match the password you picked
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
